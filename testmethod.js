@@ -15,3 +15,14 @@ let result2 = waldoRegex.test(waldoIsHiding);
 /*
 Você pode pesquisar vários padrões usando a alternância ou o operador OR: |.*/
 //------------------------------
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // Change this line
+let result3 = petRegex.test(petString);
+//------------------------------
+let myString = "freeCodeCamp";
+let fccRegex = /freeCodeCamp|FreeCOdeCamp|FrEeCoDeCamp/i; // Change this line
+let result = fccRegex.test(myString);
+/*
+Você pode usá-lo anexando-o ao regex. Um exemplo de uso deste sinalizador 
+é /ignorecase/i. Este regex pode corresponder às strings ignorecase, igNoreCase e IgnoreCase*/
+//------------------------------
