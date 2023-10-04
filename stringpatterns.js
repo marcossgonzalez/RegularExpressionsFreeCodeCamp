@@ -20,3 +20,29 @@ let quoteSample = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g; // Change this line
 let result3 = quoteSample.match(alphabetRegexV2).length;
 //--------------------------------------------------
+/*Você pode procurar o oposto de \w com \W. Observe que o 
+padrão oposto usa uma letra maiúscula. Este atalho é igual a [^A-Za-z0-9_].*/
+//--------------------------------------------------
+let quoteSample = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let result = quoteSample.match(nonAlphabetRegex).length;
+//--------------------------------------------------
+/*O atalho para procurar caracteres numéricos é \d, com d minúsculo. 
+Isto é igual à classe de caracteres [0-9], 
+que procura um único caractere de qualquer número entre zero e nove.*/
+//--------------------------------------------------
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Change this line
+let result = movieName.match(numRegex).length;
+//--------------------------------------------------
+/*O atalho para procurar caracteres que não sejam dígitos é \D. 
+Isso é igual à classe de caracteres [^0-9], 
+que procura um único caractere que não seja um número entre zero e nove.*/
+//--------------------------------------------------
+let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let result = movieName.match(noNumRegex).length;
+//--------------------------------------------------
+let username = "JackOfAllTrades";
+let userCheck = /^([a-zA-Z]{2,})+(\d*$)|^[a-zA-Z]([0-9]{2,})$/i; // Change this line
+let result = userCheck.test(username);
