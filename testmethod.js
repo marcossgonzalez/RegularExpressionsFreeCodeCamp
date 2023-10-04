@@ -105,5 +105,5 @@ let text = "<h1>Winter is coming</h1>";
 let myRegex12 = /<h.*?1>/; // Change this line
 let result13 = text.match(myRegex12);
 //------------------------------
-
+let reCriminals = /C+/; // Change this line
 //------------------------------
