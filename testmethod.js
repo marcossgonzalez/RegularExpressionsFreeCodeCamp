@@ -72,8 +72,38 @@ let alphabetRegex = /[a-z]/gi; // Change this line
 let result9 = quoteSample3.match(alphabetRegex); // Change this line
 //------------------------------
 let quoteSample = "Blueberry 3.141592653s are delicious.";
-let myRegex = /[h-s2-6]/ig; // Change this line
-let result = quoteSample.match(myRegex); // Change this line
+let myRegex3 = /[h-s2-6]/ig; // Change this line
+let result11 = quoteSample.match(myRegex3); // Change this line
+//------------------------------
+/*Para criar um conjunto de caracteres negados, coloque um caractere circunflexo (^) 
+após o colchete de abertura e antes dos caracteres que você não deseja corresponder.*/
+//------------------------------Corresponder caracteres únicos não especificados--------------------
+let quoteSample4 = "3 blind mice.";
+let myRegex2 = /[^aeiou0-9]/gi; // Change this line
+let result10 = quoteSample.match(myRegex); // Change this line
+//------------------------------Ache caracteres que ocorrem uma ou mais vezes--------------------
+/*Você pode usar o caractere + para verificar se for esse o caso. 
+Lembre-se, o caractere ou padrão deve estar presente consecutivamente. 
+Ou seja, o personagem tem que repetir um após o outro.*/
+//------------------------------
+let difficultSpelling = "Mississippi";
+let myRegex4 = /s+/g; // Change this line
+let result12 = difficultSpelling.match(myRegex);
+//------------------------------
+/*Também existe uma opção que corresponde a caracteres que ocorrem zero ou mais vezes.
+O caractere para fazer isso é o asterisco ou estrela: *.*/
+//------------------------------
+// Only change code below this line
+let chewieRegex = /A.a*/; // Change this line
+// Only change code above this line
+let result = chewieQuote.match(chewieRegex);
+//------------------------------Encontre personagens com correspondência preguiçosa-------------------
+/*No entanto, você pode usar o ? caractere para alterá-lo para correspondência lenta. 
+"titanic" comparado com o regex ajustado de /t[a-z]*?i/ retorna ["ti"].*/
+//------------------------------
+let text = "<h1>Winter is coming</h1>";
+let myRegex12 = /<h.*?1>/; // Change this line
+let result13 = text.match(myRegex12);
 //------------------------------
 
 //------------------------------
