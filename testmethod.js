@@ -47,5 +47,33 @@ let result5 = extractStr.match(codingRegex);
 você pode usar o sinalizador de pesquisa global: g.
 Ex: /Hello/g; */
 //------------------------------
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /twinkle/gi; // Change this line
+let result6 = twinkleStar.match(starRegex); // Change this line
+//------------------------------
+/*O caractere curinga . corresponderá a qualquer caractere. 
+O curinga também é chamado de ponto e ponto final. 
+Você pode usar o caractere curinga como qualquer outro caractere na regex. 
+Por exemplo, se você quiser combinar hug, huh, hut e hum, 
+poderá usar a regex /hu./ para combinar todas as quatro palavras.*/
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/gi; // Change this line
+let result7 = unRegex.test(exampleStr);
+//------------------------------
+let quoteSample2 = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi; // Change this line
+let result8 = quoteSample.match(vowelRegex); // Change this line
+//------------------------------
+/*Dentro de um conjunto de caracteres, você pode definir 
+um intervalo de caracteres para correspondência usando um caractere hífen: -.*/
+//------------------------------
+let quoteSample3 = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi; // Change this line
+let result9 = quoteSample3.match(alphabetRegex); // Change this line
+//------------------------------
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/ig; // Change this line
+let result = quoteSample.match(myRegex); // Change this line
+//------------------------------
 
 //------------------------------
