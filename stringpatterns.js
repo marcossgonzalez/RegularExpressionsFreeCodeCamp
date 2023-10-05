@@ -83,7 +83,34 @@ let result12 = timRegex.test(timStr);
 //--------------------------------------------------
 let favWord = "favorite";
 let favRegex = /favou?rite/gi; // Change this line
-let result = favRegex.test(favWord);
+let result13 = favRegex.test(favWord);
+//--------------------------------------------------Antecipação Positiva e Negativa---------------------------------------
+/*Uma antecipação positiva verificará se o elemento no padrão de pesquisa está lá, 
+mas na verdade não corresponde a ele. Um lookahead 
+positivo é usado como (?=...) onde '...' é a parte necessária que não corresponde.
+--------------Por outro lado, um lookahead negativo verificará se o elemento no padrão 
+de pesquisa não está lá. Um lookahead negativo é usado como (?!...) onde ... é o padrão 
+que você não deseja que esteja lá. O restante do padrão é retornado se a parte 
+antecipada negativa não estiver presente.*/
 //--------------------------------------------------
-
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6})(?=\D*\d\d)/i; // Change this line
+let result14 = pwRegex.test(sampleWord);
+//--------------------------------------------------
+let myString = "Eleanor Roosevelt";
+let myRegex = /^(?!.Frank.*)(Franklin|Eleanor)\s(([A-Z]\.?|[A-Z][a-z])\s)?Roosevelt/; // Change this line
+let result15 = myRegex.test(myString); // Change this line
+// After passing the challenge experiment with myString and see how the grouping works
+//--------------------------------------------------
+/*Os grupos de captura são construídos colocando o padrão regex a ser capturado 
+entre parênteses. Neste caso, o objetivo é capturar uma palavra composta por 
+caracteres alfanuméricos para que o grupo de captura seja \w+ entre parênteses: /(\w+)/.*/
+//--------------------------------------------------
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)(\s)(\1 \1$)/; // Change this line
+let result16 = repeatNum.match(reRegex);
+//--------------------------------------------------
+/*You can search and replace text in a string using .replace() on a string. 
+The inputs for .replace() is first the regex pattern you want to search for. 
+The second parameter is the string to replace the match or a function to do something.*/
 //--------------------------------------------------
