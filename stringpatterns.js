@@ -110,7 +110,16 @@ let repeatNum = "42 42 42";
 let reRegex = /^(\d+)(\s)(\1 \1$)/; // Change this line
 let result16 = repeatNum.match(reRegex);
 //--------------------------------------------------
-/*You can search and replace text in a string using .replace() on a string. 
-The inputs for .replace() is first the regex pattern you want to search for. 
-The second parameter is the string to replace the match or a function to do something.*/
+/*Você pode pesquisar e substituir texto em uma string usando .replace() em uma string. 
+As entradas para .replace() são primeiro o padrão regex que você deseja procurar. 
+O segundo parâmetro é a string para substituir a correspondência ou uma função 
+para fazer algo.*/
 //--------------------------------------------------
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let result17 = str.replace(fixRegex, replaceText);
+//--------------------------------------------------
+let hello = "   Hello, World!  ";
+let wsRegex = /(^\s+)|(\s+$)/gi; // Change this line
+let result18 = hello.replace(wsRegex, ""); // Change this line
